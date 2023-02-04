@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type-="Command">
+		<Assembly>"C:\Program Files\RevitAPITrainig\RevitAPITraining_2021_OST_DuctCurves.dll"</Assembly>		
+		<AddInId>0ED34B07-345F-49CB-9DF6-5F578477465E</AddInId>
+		<FullClassName>RevitAPITraining_2021_OST_DuctCurves.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Количество воздуховодов</Text>
+	</AddIn>	
+</RevitAddIns>

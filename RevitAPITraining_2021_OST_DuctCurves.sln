@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITraining_2021_OST_DuctCurves", "RevitAPITraining_2021_OST_DuctCurves\RevitAPITraining_2021_OST_DuctCurves.csproj", "{214642E3-BFA2-4AD9-A94D-6EF8E6DF7458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214642E3-BFA2-4AD9-A94D-6EF8E6DF7458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214642E3-BFA2-4AD9-A94D-6EF8E6DF7458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214642E3-BFA2-4AD9-A94D-6EF8E6DF7458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214642E3-BFA2-4AD9-A94D-6EF8E6DF7458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E34F3502-AAAB-4F22-BB9E-97D9E057EBCB}
+	EndGlobalSection
+EndGlobal
