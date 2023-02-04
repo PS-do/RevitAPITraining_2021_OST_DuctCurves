@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Mechanical;
 using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
@@ -18,16 +19,24 @@ namespace RevitAPITraining_2021_OST_DuctCurves
             UIDocument uidoc = uiapp.ActiveUIDocument;
             Document doc = uidoc.Document;
 
-            ElementCategoryFilter ductCurvesCategoryFilter = new ElementCategoryFilter(BuiltInCategory.OST_DuctCurves);
-            ElementClassFilter ductCurvesInstancesFilter = new ElementClassFilter(typeof(FamilyInstance));  // выберет только те, которые являются экземплярами симейств(без типов)
-            LogicalAndFilter ductCurvesFilter = new LogicalAndFilter(ductCurvesCategoryFilter, ductCurvesInstancesFilter);
+            //ElementCategoryFilter ductCurvesCategoryFilter = new ElementCategoryFilter(BuiltInCategory.OST_DuctCurvesDrop);
+            //ElementClassFilter ductCurvesInstancesFilter = new ElementClassFilter(typeof(FamilyInstance));  // выберет только те, которые являются экземплярами симейств(без типов)
+            //LogicalAndFilter ductCurvesFilter = new LogicalAndFilter(ductCurvesCategoryFilter, ductCurvesInstancesFilter);
 
-            var ductCurves = new FilteredElementCollector(doc)
-                .WherePasses(ductCurvesFilter)
-                .Cast<FamilyInstance>()
+            //var ductCurves = new FilteredElementCollector(doc)
+            //    .WherePasses(ductCurvesFilter)
+            //    .Cast<FamilyInstance>()
+            //    .ToList();
+
+
+            List<Duct> ductCurves = new FilteredElementCollector(doc)
+                .OfClass(typeof(Duct))
+                .WhereElementIsNotElementType()
+                .Cast<Duct>()
                 .ToList();
 
-            TaskDialog.Show("DuctCurves info", ductCurves.Count.ToString());
+
+            TaskDialog.Show("Количество воздуховодов:", ductCurves.Count.ToString());
             return Result.Succeeded;
         }
     }
